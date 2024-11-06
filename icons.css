@@ -1,0 +1,86 @@
+.whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 170px;
+            height: 120px;
+            background-image: url('icons/whatsapp-icon.png');
+            background-size: cover;
+            z-index: 100;
+
+            
+        }
+        .vk-icon {
+            position: fixed;
+            bottom: 130px;
+            right: 20px;
+            width: 150px;
+            height: 150px;
+            background-image: url('icons/vk-icon.png');
+            background-size: cover;
+            z-index: 100;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 80px;
+            height: 125px;
+            background-image: url('icons/23.png');
+            background-size: cover;
+            z-index: 100;
+            cursor: pointer;
+        }
+        
+        @media screen and (max-width: 600px) {
+    .whatsapp-icon {
+        width: 100px;
+        height: 80px;
+        right: 5px;
+        bottom: 10px;
+        
+    }
+    .vk-icon {
+        width: 100px;
+        height: 100px;
+        right: 0px;
+        bottom: 74px;
+    }
+    .scroll-to-top {
+        width: 50px;
+        height: 70px;
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
+
+.scroll-to-top:hover,
+.whatsapp-icon:hover,
+ .vk-icon:hover
+{
+    animation: wave 0.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.scroll-to-top {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.scrolled .scroll-to-top {
+    opacity: 1;
+    visibility: visible;
+}
